@@ -24,6 +24,20 @@ class ImageDownloader: NSObject {
             NotificationCenter.default.post(name: Constants.Notifications.ImageFetchNotification, object: nil, userInfo: [String.kImage:cachedImage, String.kImageURL:url.absoluteString])
         }
         else {
+            //check if already in progress
+            let filteredOps = self.downloadQueue.operations.filter { (op) -> Bool in
+                if op.name == url.absoluteString {
+                    return true
+                }
+                else {
+                    return false
+                }
+            }
+            if filteredOps.count > 0 {
+                return
+            }
+            
+            //go for image download
             let operation = ImageDownloadOperation(imageURL: url) { (data, error) in
                 if error == nil {
                     if let data = data, let cachedImage = UIImage(data: data) {

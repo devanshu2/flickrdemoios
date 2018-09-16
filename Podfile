@@ -9,6 +9,7 @@ target 'DevanshuTSystem' do
     pod 'SVProgressHUD'
     pod 'Toast'
     pod 'Gloss'
+    
     target 'DevanshuTSystemTests' do
         inherit! :search_paths
         # Pods for testing

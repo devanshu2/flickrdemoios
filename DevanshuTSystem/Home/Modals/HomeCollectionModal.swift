@@ -45,11 +45,8 @@ extension HomeCollectionModal: UICollectionViewDelegateFlowLayout {
             self.delegate.refreshDataCall(with: false, PageNumber: newPage)
             self.delegate.getActivityIndicator().isHidden = false
         }
-        let photo = self.photos[indexPath.item]
-        let url = FlickrKit.shared.photoURL(ForSize: .small320, fromPhoto: photo)
-        ImageDownloader.shared.getImage(url: url)
-        let visibleIndexPaths = collectionView.indexPathsForVisibleItems
         
+        let visibleIndexPaths = collectionView.indexPathsForVisibleItems
         var items:Set<String> = Set()
         for ip in visibleIndexPaths {
             let photoIP = self.photos[ip.item]
@@ -57,6 +54,10 @@ extension HomeCollectionModal: UICollectionViewDelegateFlowLayout {
             items.insert(urlIP.absoluteString)
         }
         ImageDownloader.shared.setHighPriorityForURLS(items)
+        
+        let photo = self.photos[indexPath.item]
+        let url = FlickrKit.shared.photoURL(ForSize: .small320, fromPhoto: photo)
+        ImageDownloader.shared.getImage(url: url)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
