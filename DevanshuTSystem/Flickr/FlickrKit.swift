@@ -32,6 +32,18 @@ class FlickrKit: NSObject {
         self.apiSecret = apiSecret
     }
     
+    //Mark:- Logout
+    public func logout () {
+        UserDefaults.standard.removeObject(forKey: String.kFlickrStoredTokenKey)
+        UserDefaults.standard.removeObject(forKey: String.kFlickrStoredTokenSecret)
+        UserDefaults.standard.synchronize()
+        self.isAuthorized = false
+        self.authSecret = nil
+        self.authToken = nil
+        self.beginAuthURL = nil
+    }
+    
+    //Mark:- OAuth
     public func beginAuth(withCallbackURL url:URL, Completion completion:@escaping FlickrAuthBeginCompletion) {
         if self.beginAuthURL != nil {
             completion(self.beginAuthURL, nil)
@@ -61,92 +73,6 @@ class FlickrKit: NSObject {
                 completion(nil, error)
             }
         }
-    }
-    
-    public func logout () {
-        UserDefaults.standard.removeObject(forKey: String.kFlickrStoredTokenKey)
-        UserDefaults.standard.removeObject(forKey: String.kFlickrStoredTokenSecret)
-        UserDefaults.standard.synchronize()
-        self.isAuthorized = false
-        self.authSecret = nil
-        self.authToken = nil
-        self.beginAuthURL = nil
-    }
-    
-    public func fetchPhotos(_ userId:String? = nil, SearchText text: String? = nil, PageNumber page:Int = 1, Completion completion: @escaping FlickrPhotoFetchCompletion) -> URLSessionDataTask? {
-        var args: [String: String] = [:]
-        if let storedToken = UserDefaults.standard.string(forKey: String.kFlickrStoredTokenKey) {
-            args["oauth_token"] = storedToken
-        }
-        args["method"] = "flickr.photos.search"
-        args["format"] = "json"
-        args["nojsoncallback"] = "1"
-        args["per_page"] = "24"
-        args["page"] = "\(page)"
-        if userId != nil {
-            args["user_id"] = userId
-        }
-        if text != nil {
-            args["text"] = text
-        }
-        let urlBuilder = FlickrURLBuilder()
-        var url:URL!
-        if self.isAuthorized {
-            url = urlBuilder.oauthURL(FromBaseURL: URL(string: Constants.Flickr.restAPI)!, httpMethod: .get, httpParams: args)
-        }
-        else {
-            let query = urlBuilder.signedQueryString(FromParameters: args)
-            let urlString = String(format:"%@?%@", Constants.Flickr.restAPI, query)
-            url = URL(string: urlString)!
-        }
-        var request = URLRequest(url: url)
-        request.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
-        request.httpMethod = String.kGet
-        let networkManager = NetworkManger()
-        let dataTask = networkManager.makeServerRequest(request) { (data, urlResponse, error) in
-            if let data = data {
-                do {
-                    do {
-                        if let responseData = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                            guard let jsonDict = FlickrPhotoFetchResponse(json: responseData) else {
-                                debugPrint("Could not convert json into data model")
-                                completion(nil, error)
-                                return
-                            }
-                            completion(jsonDict, nil)
-                            return
-                        }
-                    }
-                    catch {
-                        debugPrint(error.localizedDescription)
-                    }
-                }
-            }
-            completion(nil, error)
-        }
-        return dataTask
-    }
-    
-    public func photoURL(ForSize size:FlickrPhotoSize, fromPhoto photo: FlickrPhoto) -> URL {
-        let photoID = photo.id
-//        if photoID == nil {
-//            let photoID = photoDict["primary"]
-//        }
-        let server = photo.server
-        let farm = photo.farm
-        let secret = photo.secret
-        return self.photoURL(ForSize: size, PhotoID: photoID!, Server: server!, Secret: secret!, Farm: farm)
-    }
-    
-    public func photoURL(ForSize size:FlickrPhotoSize, PhotoID photoID:String, Server server:String, Secret secret:String, Farm farm:Int?) -> URL {
-        var urlString = "https://"
-        if farm != nil {
-            urlString.append(String(format:"farm%ld.", farm!))
-        }
-        urlString.append("static.flickr.com/")
-        urlString.append(String(format:"%@/%@_%@", server, photoID, secret))
-        urlString.append(String(format:"_%@.jpg", size.rawValue))
-        return URL(string: urlString)!
     }
     
     public func checkAuthorization(_ completion: @escaping FlickrAPIAuthCompletion) {
@@ -277,6 +203,80 @@ class FlickrKit: NSObject {
     private func userAuthorizationURL(WithRequestToken inRequestToken:String) -> URL {
         let perms = String(format:"&perms=read")
         let urlString = String(format:"https://www.flickr.com/services/oauth/authorize?oauth_token=%@%@", inRequestToken, perms)
+        return URL(string: urlString)!
+    }
+    
+    //Mark:- Photo
+    public func fetchPhotos(_ userId:String? = nil, SearchText text: String? = nil, PageNumber page:Int = 1, Completion completion: @escaping FlickrPhotoFetchCompletion) -> URLSessionDataTask? {
+        var args: [String: String] = [:]
+        if let storedToken = UserDefaults.standard.string(forKey: String.kFlickrStoredTokenKey) {
+            args["oauth_token"] = storedToken
+        }
+        args["method"] = "flickr.photos.search"
+        args["format"] = "json"
+        args["nojsoncallback"] = "1"
+        args["per_page"] = "24"
+        args["page"] = "\(page)"
+        if userId != nil {
+            args["user_id"] = userId
+        }
+        if text != nil {
+            args["text"] = text
+        }
+        let urlBuilder = FlickrURLBuilder()
+        var url:URL!
+        if self.isAuthorized {
+            url = urlBuilder.oauthURL(FromBaseURL: URL(string: Constants.Flickr.restAPI)!, httpMethod: .get, httpParams: args)
+        }
+        else {
+            let query = urlBuilder.signedQueryString(FromParameters: args)
+            let urlString = String(format:"%@?%@", Constants.Flickr.restAPI, query)
+            url = URL(string: urlString)!
+        }
+        var request = URLRequest(url: url)
+        request.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
+        request.httpMethod = String.kGet
+        let networkManager = NetworkManger()
+        let dataTask = networkManager.makeServerRequest(request) { (data, urlResponse, error) in
+            if let data = data {
+                do {
+                    do {
+                        if let responseData = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
+                            guard let jsonDict = FlickrPhotoFetchResponse(json: responseData) else {
+                                debugPrint("Could not convert json into data model")
+                                completion(nil, error)
+                                return
+                            }
+                            completion(jsonDict, nil)
+                            return
+                        }
+                    }
+                    catch {
+                        debugPrint(error.localizedDescription)
+                    }
+                }
+            }
+            completion(nil, error)
+        }
+        return dataTask
+    }
+    
+    public func photoURL(ForSize size:FlickrPhotoSize, fromPhoto photo: FlickrPhoto) -> URL {
+        let photoID = photo.id
+        let server = photo.server
+        let farm = photo.farm
+        let secret = photo.secret
+        return self.photoURL(ForSize: size, PhotoID: photoID!, Server: server!, Secret: secret!, Farm: farm)
+    }
+    
+    public func photoURL(ForSize size:FlickrPhotoSize, PhotoID photoID:String, Server server:String, Secret secret:String, Farm farm:Int?) -> URL {
+        var urlString = "https://"
+        if farm != nil {
+            urlString.append(String(format:"farm%ld.", farm!))
+        }
+        urlString.append("static.flickr.com/")
+        urlString.append(String(format:"%@/%@_%@", server, photoID, secret))
+        urlString.append(String(format:"_%@.jpg", size.rawValue))
         return URL(string: urlString)!
     }
 }

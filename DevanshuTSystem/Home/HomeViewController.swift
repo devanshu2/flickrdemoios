@@ -24,8 +24,26 @@ class HomeViewController: BaseViewController {
     private var cellEdge: CGFloat = 0.0
     private var padding: CGFloat = 0.0
     private var lastDataTask: URLSessionDataTask?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.initViewController()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.title = "Home"
+        self.navigationItem.titleView = self.searchBar
+        self.updateGridbutton()
+        self.refreshData(with: true, PageNumber: 1)
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        self.calculateCellDimensions(size.width)
+        self.collectionView.reloadData()
+    }
+    
+    private func initViewController() {
         self.checkAuthentication()
         self.userLoggedOut()
         self.configureDefaultDoneToolBar()
@@ -37,14 +55,6 @@ class HomeViewController: BaseViewController {
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         self.activityIndicator.isHidden = true
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        self.title = "Home"
-        self.navigationItem.titleView = self.searchBar
-        self.updateGridbutton()
-        self.refreshData(with: true, PageNumber: 1)
     }
     
     private func updateGridbutton(_ animation:Bool = false) {
@@ -61,10 +71,6 @@ class HomeViewController: BaseViewController {
         debugPrint("done")
     }
     
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        self.calculateCellDimensions(size.width)
-        self.collectionView.reloadData()
-    }
     
     override func toolBarDoneAction(_ sender: Any) {
         self.searchBar.resignFirstResponder()
