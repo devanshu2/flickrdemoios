@@ -8,24 +8,8 @@
 
 import UIKit
 
-enum GridState: Int {
-    case dual = 2
-    case triple = 3
-    case quad = 4
-    
-    func getImage() -> UIImage {
-        switch self {
-        case .dual:
-            return #imageLiteral(resourceName: "grid-2")
-        case .triple:
-            return #imageLiteral(resourceName: "grid-3")
-        default:
-            return #imageLiteral(resourceName: "grid-4")
-        }
-    }
-}
 
-class ViewController: BaseViewController {
+class HomeViewController: BaseViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var authButton: UIButton!
@@ -261,7 +245,7 @@ class ViewController: BaseViewController {
     }
 }
 
-extension ViewController: UISearchBarDelegate {
+extension HomeViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         self.refreshData(with: true, PageNumber: 1)
         searchBar.resignFirstResponder()
@@ -278,7 +262,7 @@ extension ViewController: UISearchBarDelegate {
 
 
 // MARK: - UICollectionViewDelegateFlowLayout Method
-extension ViewController: UICollectionViewDelegateFlowLayout {
+extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
     }
@@ -326,7 +310,7 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
 }
 
 // MARK: - UICollectionViewDataSource Method
-extension ViewController: UICollectionViewDataSource {
+extension HomeViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.photos.count
     }

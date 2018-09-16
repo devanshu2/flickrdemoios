@@ -8,33 +8,6 @@
 
 import UIKit
 
-enum FlickrPermission: String {
-    case read = "read"
-    case write = "write"
-    case delete = "delete"
-}
-
-enum FlickrPhotoSize: String {
-    case unknown = ""
-    case collectionIconLarge = "collectionIconLarge"
-    case buddyIcon = "buddyIcon"
-    case smallSquare75 = "s"
-    case largeSquare150 = "q"
-    case thumbnail100 = "t"
-    case small240 = "m"
-    case small320 = "n"
-    case medium640 = "z"
-    case medium800 = "c"
-    case large1024 = "b"
-    case large1600 = "h"
-    case large2048 = "k"
-    case original = "o"
-}
-
-typealias FlickrAuthBeginCompletion = (_ flickrLoginPageURL: URL?, _ error: Error?) -> Void
-typealias FlickrAPIAuthCompletion = (_ userName: String?, _ userId: String?, _ fullName:String?, _ error: Error?) -> Void
-typealias FlickrPhotoFetchCompletion = (_ response: FlickrPhotoFetchResponse?, _ error: Error?) -> Void
-
 class FlickrKit: NSObject {
     
     public private(set) var apiKey: String!
@@ -166,7 +139,6 @@ class FlickrKit: NSObject {
     }
     
     public func photoURL(ForSize size:FlickrPhotoSize, PhotoID photoID:String, Server server:String, Secret secret:String, Farm farm:Int?) -> URL {
-        let photoSource = "https://static.flickr.com/"
         var urlString = "https://"
         if farm != nil {
             urlString.append(String(format:"farm%ld.", farm!))

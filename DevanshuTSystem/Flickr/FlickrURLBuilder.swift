@@ -8,11 +8,6 @@
 
 import UIKit
 
-enum FlickrHttpMethod: String {
-    case get = "GET"
-    case post = "POST"
-}
-
 class FlickrURLBuilder: NSObject {
     
     //MARK:- URL Encryption
