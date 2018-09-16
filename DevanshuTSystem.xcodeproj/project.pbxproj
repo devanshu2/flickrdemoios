@@ -36,6 +36,7 @@
 		50EC6621214F136F0041A506 /* FlickrPhotoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EC6620214F136F0041A506 /* FlickrPhotoResponse.swift */; };
 		50EC6626214F14650041A506 /* PublicEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EC6625214F14650041A506 /* PublicEnums.swift */; };
 		50EC6628214F14D70041A506 /* PublicClosures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EC6627214F14D70041A506 /* PublicClosures.swift */; };
+		50EC662A214F16260041A506 /* HomeCollectionModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EC6629214F16260041A506 /* HomeCollectionModal.swift */; };
 		7B304E4E6D1B80E706E36D16 /* Pods_DevanshuTSystemTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBCACD38AD37288633A555D /* Pods_DevanshuTSystemTests.framework */; };
 		DA8F0329019D8FBBA936BAA8 /* Pods_DevanshuTSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2B3723B28D3CB6D7A8DC2D2 /* Pods_DevanshuTSystem.framework */; };
 /* End PBXBuildFile section */
@@ -88,6 +89,7 @@
 		50EC6620214F136F0041A506 /* FlickrPhotoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrPhotoResponse.swift; sourceTree = "<group>"; };
 		50EC6625214F14650041A506 /* PublicEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicEnums.swift; sourceTree = "<group>"; };
 		50EC6627214F14D70041A506 /* PublicClosures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicClosures.swift; sourceTree = "<group>"; };
+		50EC6629214F16260041A506 /* HomeCollectionModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCollectionModal.swift; sourceTree = "<group>"; };
 		6EBCACD38AD37288633A555D /* Pods_DevanshuTSystemTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevanshuTSystemTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E75193BCB744B8A86710B49 /* Pods-DevanshuTSystemTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevanshuTSystemTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DevanshuTSystemTests/Pods-DevanshuTSystemTests.release.xcconfig"; sourceTree = "<group>"; };
 		A2B3723B28D3CB6D7A8DC2D2 /* Pods_DevanshuTSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevanshuTSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -269,6 +271,7 @@
 				50488913214EB04100C213CD /* FlickrPhoto.swift */,
 				50EC661E214F13510041A506 /* FlickrPhotoFetchResponse.swift */,
 				50EC6620214F136F0041A506 /* FlickrPhotoResponse.swift */,
+				50EC6629214F16260041A506 /* HomeCollectionModal.swift */,
 			);
 			path = Modals;
 			sourceTree = "<group>";
@@ -473,6 +476,7 @@
 				5016FE1C214E5EEA00391E81 /* BaseViewController.swift in Sources */,
 				50EC6628214F14D70041A506 /* PublicClosures.swift in Sources */,
 				50EC6621214F136F0041A506 /* FlickrPhotoResponse.swift in Sources */,
+				50EC662A214F16260041A506 /* HomeCollectionModal.swift in Sources */,
 				50340D98214EED9A001E132F /* ImageCollectionViewCell.swift in Sources */,
 				507D20B3214C3E1F0007CA48 /* AppDelegate.swift in Sources */,
 				507D20D8214C6EAE0007CA48 /* ImageDownloader.swift in Sources */,
