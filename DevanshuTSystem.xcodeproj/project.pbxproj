@@ -1,0 +1,670 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5016FE05214E091300391E81 /* FlickrURLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5016FE04214E091300391E81 /* FlickrURLBuilder.swift */; };
+		5016FE0E214E0F0B00391E81 /* FKUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 5016FE0B214E0F0B00391E81 /* FKUtilities.m */; };
+		5016FE0F214E0F0B00391E81 /* FKOFHMACSha1Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 5016FE0C214E0F0B00391E81 /* FKOFHMACSha1Base64.m */; };
+		5016FE11214E478600391E81 /* FKDUNetworkOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5016FE10214E478600391E81 /* FKDUNetworkOperation.swift */; };
+		5016FE13214E4BB900391E81 /* NetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5016FE12214E4BB900391E81 /* NetworkManger.swift */; };
+		5016FE15214E53B500391E81 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5016FE14214E53B500391E81 /* Data.swift */; };
+		5016FE17214E570500391E81 /* URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5016FE16214E570500391E81 /* URL.swift */; };
+		5016FE1A214E5E2B00391E81 /* FlickrAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5016FE19214E5E2B00391E81 /* FlickrAuthViewController.swift */; };
+		5016FE1C214E5EEA00391E81 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5016FE1B214E5EEA00391E81 /* BaseViewController.swift */; };
+		50187952214C70F300FC26FC /* ImageDownloadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50187951214C70F300FC26FC /* ImageDownloadOperation.swift */; };
+		50187956214C7F9600FC26FC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50187955214C7F9600FC26FC /* Constants.swift */; };
+		50187958214C811A00FC26FC /* CustomImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50187957214C811A00FC26FC /* CustomImageView.swift */; };
+		5018795A214C83D400FC26FC /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50187959214C83D400FC26FC /* String.swift */; };
+		5030C619214D7BB70099E161 /* FlickrKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5030C618214D7BB70099E161 /* FlickrKit.swift */; };
+		50340D98214EED9A001E132F /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50340D96214EED9A001E132F /* ImageCollectionViewCell.swift */; };
+		50340D99214EED9A001E132F /* ImageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50340D97214EED9A001E132F /* ImageCollectionViewCell.xib */; };
+		50488914214EB04100C213CD /* FlickrPhoto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50488913214EB04100C213CD /* FlickrPhoto.swift */; };
+		507D20B3214C3E1F0007CA48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507D20B2214C3E1F0007CA48 /* AppDelegate.swift */; };
+		507D20B5214C3E1F0007CA48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507D20B4214C3E1F0007CA48 /* ViewController.swift */; };
+		507D20B8214C3E1F0007CA48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 507D20B6214C3E1F0007CA48 /* Main.storyboard */; };
+		507D20BA214C3E210007CA48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 507D20B9214C3E210007CA48 /* Assets.xcassets */; };
+		507D20BD214C3E210007CA48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 507D20BB214C3E210007CA48 /* LaunchScreen.storyboard */; };
+		507D20C8214C3E210007CA48 /* DevanshuTSystemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507D20C7214C3E210007CA48 /* DevanshuTSystemTests.swift */; };
+		507D20D4214C52750007CA48 /* AsynchronousOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507D20D3214C52750007CA48 /* AsynchronousOperation.swift */; };
+		507D20D8214C6EAE0007CA48 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 507D20D7214C6EAE0007CA48 /* ImageDownloader.swift */; };
+		7B304E4E6D1B80E706E36D16 /* Pods_DevanshuTSystemTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EBCACD38AD37288633A555D /* Pods_DevanshuTSystemTests.framework */; };
+		DA8F0329019D8FBBA936BAA8 /* Pods_DevanshuTSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2B3723B28D3CB6D7A8DC2D2 /* Pods_DevanshuTSystem.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		507D20C4214C3E210007CA48 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 507D20A7214C3E1F0007CA48 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 507D20AE214C3E1F0007CA48;
+			remoteInfo = DevanshuTSystem;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5016FE04214E091300391E81 /* FlickrURLBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrURLBuilder.swift; sourceTree = "<group>"; };
+		5016FE08214E0EC000391E81 /* ObjcBridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjcBridge.h; sourceTree = "<group>"; };
+		5016FE0A214E0F0B00391E81 /* FKOFHMACSha1Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKOFHMACSha1Base64.h; sourceTree = "<group>"; };
+		5016FE0B214E0F0B00391E81 /* FKUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKUtilities.m; sourceTree = "<group>"; };
+		5016FE0C214E0F0B00391E81 /* FKOFHMACSha1Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FKOFHMACSha1Base64.m; sourceTree = "<group>"; };
+		5016FE0D214E0F0B00391E81 /* FKUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FKUtilities.h; sourceTree = "<group>"; };
+		5016FE10214E478600391E81 /* FKDUNetworkOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FKDUNetworkOperation.swift; sourceTree = "<group>"; };
+		5016FE12214E4BB900391E81 /* NetworkManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManger.swift; sourceTree = "<group>"; };
+		5016FE14214E53B500391E81 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		5016FE16214E570500391E81 /* URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URL.swift; sourceTree = "<group>"; };
+		5016FE19214E5E2B00391E81 /* FlickrAuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrAuthViewController.swift; sourceTree = "<group>"; };
+		5016FE1B214E5EEA00391E81 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		50187951214C70F300FC26FC /* ImageDownloadOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloadOperation.swift; sourceTree = "<group>"; };
+		50187955214C7F9600FC26FC /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		50187957214C811A00FC26FC /* CustomImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImageView.swift; sourceTree = "<group>"; };
+		50187959214C83D400FC26FC /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		5030C618214D7BB70099E161 /* FlickrKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrKit.swift; sourceTree = "<group>"; };
+		50340D96214EED9A001E132F /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		50340D97214EED9A001E132F /* ImageCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImageCollectionViewCell.xib; sourceTree = "<group>"; };
+		503666E70A7DD72EF67FB032 /* Pods-DevanshuTSystemTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevanshuTSystemTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DevanshuTSystemTests/Pods-DevanshuTSystemTests.debug.xcconfig"; sourceTree = "<group>"; };
+		50488913214EB04100C213CD /* FlickrPhoto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickrPhoto.swift; sourceTree = "<group>"; };
+		507D20AF214C3E1F0007CA48 /* DevanshuTSystem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevanshuTSystem.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		507D20B2214C3E1F0007CA48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		507D20B4214C3E1F0007CA48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		507D20B7214C3E1F0007CA48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		507D20B9214C3E210007CA48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		507D20BC214C3E210007CA48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		507D20BE214C3E210007CA48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		507D20C3214C3E210007CA48 /* DevanshuTSystemTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DevanshuTSystemTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		507D20C7214C3E210007CA48 /* DevanshuTSystemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevanshuTSystemTests.swift; sourceTree = "<group>"; };
+		507D20C9214C3E210007CA48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		507D20D3214C52750007CA48 /* AsynchronousOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsynchronousOperation.swift; sourceTree = "<group>"; };
+		507D20D7214C6EAE0007CA48 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		6EBCACD38AD37288633A555D /* Pods_DevanshuTSystemTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevanshuTSystemTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E75193BCB744B8A86710B49 /* Pods-DevanshuTSystemTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevanshuTSystemTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DevanshuTSystemTests/Pods-DevanshuTSystemTests.release.xcconfig"; sourceTree = "<group>"; };
+		A2B3723B28D3CB6D7A8DC2D2 /* Pods_DevanshuTSystem.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevanshuTSystem.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C61D9EBAC7DAF029B12DA8EB /* Pods-DevanshuTSystem.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevanshuTSystem.release.xcconfig"; path = "Pods/Target Support Files/Pods-DevanshuTSystem/Pods-DevanshuTSystem.release.xcconfig"; sourceTree = "<group>"; };
+		D1CFB2BEA20482D72F3117A3 /* Pods-DevanshuTSystem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevanshuTSystem.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DevanshuTSystem/Pods-DevanshuTSystem.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		507D20AC214C3E1F0007CA48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA8F0329019D8FBBA936BAA8 /* Pods_DevanshuTSystem.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		507D20C0214C3E210007CA48 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B304E4E6D1B80E706E36D16 /* Pods_DevanshuTSystemTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		21A2722E182E85243C11E49A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D1CFB2BEA20482D72F3117A3 /* Pods-DevanshuTSystem.debug.xcconfig */,
+				C61D9EBAC7DAF029B12DA8EB /* Pods-DevanshuTSystem.release.xcconfig */,
+				503666E70A7DD72EF67FB032 /* Pods-DevanshuTSystemTests.debug.xcconfig */,
+				9E75193BCB744B8A86710B49 /* Pods-DevanshuTSystemTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5016FE09214E0F0B00391E81 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5016FE0A214E0F0B00391E81 /* FKOFHMACSha1Base64.h */,
+				5016FE0C214E0F0B00391E81 /* FKOFHMACSha1Base64.m */,
+				5016FE0D214E0F0B00391E81 /* FKUtilities.h */,
+				5016FE0B214E0F0B00391E81 /* FKUtilities.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		5030C617214D7BA30099E161 /* Flickr */ = {
+			isa = PBXGroup;
+			children = (
+				5016FE09214E0F0B00391E81 /* Utilities */,
+				5030C618214D7BB70099E161 /* FlickrKit.swift */,
+				5016FE04214E091300391E81 /* FlickrURLBuilder.swift */,
+				5016FE10214E478600391E81 /* FKDUNetworkOperation.swift */,
+				5016FE19214E5E2B00391E81 /* FlickrAuthViewController.swift */,
+			);
+			path = Flickr;
+			sourceTree = "<group>";
+		};
+		507D20A6214C3E1F0007CA48 = {
+			isa = PBXGroup;
+			children = (
+				507D20B1214C3E1F0007CA48 /* DevanshuTSystem */,
+				507D20C6214C3E210007CA48 /* DevanshuTSystemTests */,
+				507D20B0214C3E1F0007CA48 /* Products */,
+				21A2722E182E85243C11E49A /* Pods */,
+				D005D8842C0AA8B2188C6865 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		507D20B0214C3E1F0007CA48 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				507D20AF214C3E1F0007CA48 /* DevanshuTSystem.app */,
+				507D20C3214C3E210007CA48 /* DevanshuTSystemTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		507D20B1214C3E1F0007CA48 /* DevanshuTSystem */ = {
+			isa = PBXGroup;
+			children = (
+				507D20B2214C3E1F0007CA48 /* AppDelegate.swift */,
+				507D20B4214C3E1F0007CA48 /* ViewController.swift */,
+				50340D96214EED9A001E132F /* ImageCollectionViewCell.swift */,
+				50340D97214EED9A001E132F /* ImageCollectionViewCell.xib */,
+				507D20D3214C52750007CA48 /* AsynchronousOperation.swift */,
+				50187951214C70F300FC26FC /* ImageDownloadOperation.swift */,
+				507D20D7214C6EAE0007CA48 /* ImageDownloader.swift */,
+				50187957214C811A00FC26FC /* CustomImageView.swift */,
+				50187955214C7F9600FC26FC /* Constants.swift */,
+				50187959214C83D400FC26FC /* String.swift */,
+				5016FE14214E53B500391E81 /* Data.swift */,
+				5016FE16214E570500391E81 /* URL.swift */,
+				5016FE1B214E5EEA00391E81 /* BaseViewController.swift */,
+				50488913214EB04100C213CD /* FlickrPhoto.swift */,
+				5030C617214D7BA30099E161 /* Flickr */,
+				507D20B6214C3E1F0007CA48 /* Main.storyboard */,
+				507D20B9214C3E210007CA48 /* Assets.xcassets */,
+				507D20BB214C3E210007CA48 /* LaunchScreen.storyboard */,
+				507D20BE214C3E210007CA48 /* Info.plist */,
+				5016FE08214E0EC000391E81 /* ObjcBridge.h */,
+				5016FE12214E4BB900391E81 /* NetworkManger.swift */,
+			);
+			path = DevanshuTSystem;
+			sourceTree = "<group>";
+		};
+		507D20C6214C3E210007CA48 /* DevanshuTSystemTests */ = {
+			isa = PBXGroup;
+			children = (
+				507D20C7214C3E210007CA48 /* DevanshuTSystemTests.swift */,
+				507D20C9214C3E210007CA48 /* Info.plist */,
+			);
+			path = DevanshuTSystemTests;
+			sourceTree = "<group>";
+		};
+		D005D8842C0AA8B2188C6865 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A2B3723B28D3CB6D7A8DC2D2 /* Pods_DevanshuTSystem.framework */,
+				6EBCACD38AD37288633A555D /* Pods_DevanshuTSystemTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		507D20AE214C3E1F0007CA48 /* DevanshuTSystem */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 507D20CC214C3E210007CA48 /* Build configuration list for PBXNativeTarget "DevanshuTSystem" */;
+			buildPhases = (
+				8C0310A336E86A192AAB1F2C /* [CP] Check Pods Manifest.lock */,
+				507D20AB214C3E1F0007CA48 /* Sources */,
+				507D20AC214C3E1F0007CA48 /* Frameworks */,
+				507D20AD214C3E1F0007CA48 /* Resources */,
+				916BEA914AC5B49C12C977B3 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DevanshuTSystem;
+			productName = DevanshuTSystem;
+			productReference = 507D20AF214C3E1F0007CA48 /* DevanshuTSystem.app */;
+			productType = "com.apple.product-type.application";
+		};
+		507D20C2214C3E210007CA48 /* DevanshuTSystemTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 507D20CF214C3E210007CA48 /* Build configuration list for PBXNativeTarget "DevanshuTSystemTests" */;
+			buildPhases = (
+				223726D320F99FED2193CF28 /* [CP] Check Pods Manifest.lock */,
+				507D20BF214C3E210007CA48 /* Sources */,
+				507D20C0214C3E210007CA48 /* Frameworks */,
+				507D20C1214C3E210007CA48 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				507D20C5214C3E210007CA48 /* PBXTargetDependency */,
+			);
+			name = DevanshuTSystemTests;
+			productName = DevanshuTSystemTests;
+			productReference = 507D20C3214C3E210007CA48 /* DevanshuTSystemTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		507D20A7214C3E1F0007CA48 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = "Devanshu Saini";
+				TargetAttributes = {
+					507D20AE214C3E1F0007CA48 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					507D20C2214C3E210007CA48 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 507D20AE214C3E1F0007CA48;
+					};
+				};
+			};
+			buildConfigurationList = 507D20AA214C3E1F0007CA48 /* Build configuration list for PBXProject "DevanshuTSystem" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 507D20A6214C3E1F0007CA48;
+			productRefGroup = 507D20B0214C3E1F0007CA48 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				507D20AE214C3E1F0007CA48 /* DevanshuTSystem */,
+				507D20C2214C3E210007CA48 /* DevanshuTSystemTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		507D20AD214C3E1F0007CA48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				507D20BD214C3E210007CA48 /* LaunchScreen.storyboard in Resources */,
+				507D20BA214C3E210007CA48 /* Assets.xcassets in Resources */,
+				50340D99214EED9A001E132F /* ImageCollectionViewCell.xib in Resources */,
+				507D20B8214C3E1F0007CA48 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		507D20C1214C3E210007CA48 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		223726D320F99FED2193CF28 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DevanshuTSystemTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C0310A336E86A192AAB1F2C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DevanshuTSystem-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		916BEA914AC5B49C12C977B3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DevanshuTSystem/Pods-DevanshuTSystem-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Gloss/Gloss.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/Toast/Toast.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Gloss.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toast.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DevanshuTSystem/Pods-DevanshuTSystem-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		507D20AB214C3E1F0007CA48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5030C619214D7BB70099E161 /* FlickrKit.swift in Sources */,
+				5016FE15214E53B500391E81 /* Data.swift in Sources */,
+				507D20B5214C3E1F0007CA48 /* ViewController.swift in Sources */,
+				5016FE13214E4BB900391E81 /* NetworkManger.swift in Sources */,
+				5016FE05214E091300391E81 /* FlickrURLBuilder.swift in Sources */,
+				5016FE1C214E5EEA00391E81 /* BaseViewController.swift in Sources */,
+				50340D98214EED9A001E132F /* ImageCollectionViewCell.swift in Sources */,
+				507D20B3214C3E1F0007CA48 /* AppDelegate.swift in Sources */,
+				507D20D8214C6EAE0007CA48 /* ImageDownloader.swift in Sources */,
+				5016FE17214E570500391E81 /* URL.swift in Sources */,
+				50187958214C811A00FC26FC /* CustomImageView.swift in Sources */,
+				50187952214C70F300FC26FC /* ImageDownloadOperation.swift in Sources */,
+				5016FE11214E478600391E81 /* FKDUNetworkOperation.swift in Sources */,
+				5016FE1A214E5E2B00391E81 /* FlickrAuthViewController.swift in Sources */,
+				5016FE0E214E0F0B00391E81 /* FKUtilities.m in Sources */,
+				5016FE0F214E0F0B00391E81 /* FKOFHMACSha1Base64.m in Sources */,
+				507D20D4214C52750007CA48 /* AsynchronousOperation.swift in Sources */,
+				50488914214EB04100C213CD /* FlickrPhoto.swift in Sources */,
+				5018795A214C83D400FC26FC /* String.swift in Sources */,
+				50187956214C7F9600FC26FC /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		507D20BF214C3E210007CA48 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				507D20C8214C3E210007CA48 /* DevanshuTSystemTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		507D20C5214C3E210007CA48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 507D20AE214C3E1F0007CA48 /* DevanshuTSystem */;
+			targetProxy = 507D20C4214C3E210007CA48 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		507D20B6214C3E1F0007CA48 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				507D20B7214C3E1F0007CA48 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		507D20BB214C3E210007CA48 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				507D20BC214C3E210007CA48 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		507D20CA214C3E210007CA48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		507D20CB214C3E210007CA48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		507D20CD214C3E210007CA48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1CFB2BEA20482D72F3117A3 /* Pods-DevanshuTSystem.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NSZDV785P2;
+				INFOPLIST_FILE = DevanshuTSystem/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.devanshu.DevanshuTSystem;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = DevanshuTSystem/ObjcBridge.h;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		507D20CE214C3E210007CA48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C61D9EBAC7DAF029B12DA8EB /* Pods-DevanshuTSystem.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NSZDV785P2;
+				INFOPLIST_FILE = DevanshuTSystem/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.devanshu.DevanshuTSystem;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = DevanshuTSystem/ObjcBridge.h;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		507D20D0214C3E210007CA48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 503666E70A7DD72EF67FB032 /* Pods-DevanshuTSystemTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NSZDV785P2;
+				INFOPLIST_FILE = DevanshuTSystemTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.devanshu.DevanshuTSystemTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DevanshuTSystem.app/DevanshuTSystem";
+			};
+			name = Debug;
+		};
+		507D20D1214C3E210007CA48 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E75193BCB744B8A86710B49 /* Pods-DevanshuTSystemTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = NSZDV785P2;
+				INFOPLIST_FILE = DevanshuTSystemTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.devanshu.DevanshuTSystemTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DevanshuTSystem.app/DevanshuTSystem";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		507D20AA214C3E1F0007CA48 /* Build configuration list for PBXProject "DevanshuTSystem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				507D20CA214C3E210007CA48 /* Debug */,
+				507D20CB214C3E210007CA48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		507D20CC214C3E210007CA48 /* Build configuration list for PBXNativeTarget "DevanshuTSystem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				507D20CD214C3E210007CA48 /* Debug */,
+				507D20CE214C3E210007CA48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		507D20CF214C3E210007CA48 /* Build configuration list for PBXNativeTarget "DevanshuTSystemTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				507D20D0214C3E210007CA48 /* Debug */,
+				507D20D1214C3E210007CA48 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 507D20A7214C3E1F0007CA48 /* Project object */;
+}

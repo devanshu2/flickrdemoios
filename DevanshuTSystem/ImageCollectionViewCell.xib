@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ImageCollectionViewCell" customModule="DevanshuTSystem" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="273" height="243"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="273" height="243"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m7t-gX-mLo">
+                        <rect key="frame" x="0.0" y="0.0" width="273" height="243"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ca9-jG-F0A" customClass="CustomImageView" customModule="DevanshuTSystem" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="273" height="243"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Ca9-jG-F0A" secondAttribute="bottom" id="8TY-a3-99U"/>
+                            <constraint firstItem="Ca9-jG-F0A" firstAttribute="leading" secondItem="m7t-gX-mLo" secondAttribute="leading" id="iOt-ZL-gN5"/>
+                            <constraint firstAttribute="trailing" secondItem="Ca9-jG-F0A" secondAttribute="trailing" id="jTp-wG-e8O"/>
+                            <constraint firstItem="Ca9-jG-F0A" firstAttribute="top" secondItem="m7t-gX-mLo" secondAttribute="top" id="swq-mI-APJ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="m7t-gX-mLo" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="36l-TR-gzi"/>
+                <constraint firstAttribute="bottom" secondItem="m7t-gX-mLo" secondAttribute="bottom" id="7ea-Ak-PIC"/>
+                <constraint firstItem="m7t-gX-mLo" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="H7F-Xc-LhB"/>
+                <constraint firstAttribute="trailing" secondItem="m7t-gX-mLo" secondAttribute="trailing" id="Q1a-8L-9rK"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="273" height="243"/>
+            <connections>
+                <outlet property="imageView" destination="Ca9-jG-F0A" id="e6Y-hk-q6X"/>
+                <outlet property="imageViewWrapper" destination="m7t-gX-mLo" id="sAv-UK-I4c"/>
+            </connections>
+            <point key="canvasLocation" x="-76" y="-41"/>
+        </collectionViewCell>
+    </objects>
+</document>
