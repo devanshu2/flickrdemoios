@@ -24,16 +24,8 @@ class ImageDownloader: NSObject {
             NotificationCenter.default.post(name: Constants.Notifications.ImageFetchNotification, object: nil, userInfo: [String.kImage:cachedImage, String.kImageURL:url.absoluteString])
         }
         else {
-            //check if already in progress
-            let filteredOps = self.downloadQueue.operations.filter { (op) -> Bool in
-                if op.name == url.absoluteString {
-                    return true
-                }
-                else {
-                    return false
-                }
-            }
-            if filteredOps.count > 0 {
+            //check if already in progress            
+            if self.checkIfAlreadyForDownload(url) {
                 return
             }
             
@@ -50,6 +42,23 @@ class ImageDownloader: NSObject {
                 }
             }
             self.downloadQueue.addOperation(operation)
+        }
+    }
+    
+    private func checkIfAlreadyForDownload(_ url: URL) -> Bool {
+        let filteredOps = self.downloadQueue.operations.filter { (op) -> Bool in
+            if op.name == url.absoluteString {
+                return true
+            }
+            else {
+                return false
+            }
+        }
+        if filteredOps.count > 0 {
+            return true
+        }
+        else {
+            return false
         }
     }
     
